@@ -1,4 +1,5 @@
 import java.sql.Connection;
+import java.util.Scanner;
 
 public class Inicio {
 
@@ -6,15 +7,49 @@ public class Inicio {
 
         System.out.println("Hola APP");
 
-        Conexion conexion = new Conexion();
+        Scanner sc = new Scanner(System.in);
+        int opcion = 0;
 
-        try(Connection cnx = conexion.get_connection()){
+        do{
+            System.out.println("-----------------------");
+            System.out.println("Aplicación mensajes");
+            System.out.println("1. Crear Mensaje");
+            System.out.println("2. Listar Mensaje");
+            System.out.println("3. Editar Mensaje");
+            System.out.println("4. Eliminar Mensaje");
+            System.out.println("5. Salir");
 
-        }catch (Exception e){
+            //Lectura de opción
+            opcion = sc.nextInt();
 
-            System.out.println(e);
 
-        }
+            switch (opcion){
+                case 1:
+                    MensajesService.crearMensaje();
+                    break;
+                case 2:
+                    MensajesService.listarMensaje();
+                    break;
+                case 3:
+                    MensajesService.editMensaje();
+                    break;
+
+                case 4:
+                    MensajesService.borrarMensaje();
+                    break;
+
+                default:
+                    break;
+
+            }
+
+
+        }while(opcion!=5);
+
+
+
+
+
     }
 
 }

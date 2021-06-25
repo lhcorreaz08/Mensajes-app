@@ -12,6 +12,7 @@ public class MensajesDao {
             PreparedStatement p = null;
             try(){
                 String query = "INSERT INTO mensajes (mensaje, autor_mensaje) VALUES (Que Onda, Luis Correa, CURRENT_TIMESTAMP)";
+                //EStas
             }
 
         }catch (SQLException e){

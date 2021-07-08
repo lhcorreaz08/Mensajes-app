@@ -7,7 +7,7 @@ public class MensajesDao {
 
     public static void crearMensajeDB(Mensajes mensajes){
 
-        Conexion dbConnect = new Conexion();
+        /*Conexion dbConnect = new Conexion();
         try(Conexion conexion = dbConnect.get_connection()){
             PreparedStatement p = null;
             try(){
@@ -18,7 +18,7 @@ public class MensajesDao {
         }catch (SQLException e){
             System.out.println(e);
         }
-
+*/
     }
 
     public static void leerMensajeDB(){

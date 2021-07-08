@@ -7,6 +7,9 @@ public class Inicio {
 
         System.out.println("Hola APP");
 
+        Conexion dbConnect = new Conexion();
+        dbConnect.get_connection();
+
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
 

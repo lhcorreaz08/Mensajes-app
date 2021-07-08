@@ -8,8 +8,8 @@ public class Conexion {
 
         Connection connection = null;
         try{
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mensajes_app", "root", "");
-
+            connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/mensaje_app", "luis", "tensorflow86");
+            System.out.println("Conexión exitosa! ");
 
         }catch(SQLException e){
             System.out.println(e);

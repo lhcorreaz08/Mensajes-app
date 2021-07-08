@@ -1,4 +1,4 @@
-import java.sql.Connection;
+import java.sql.*;
 import java.util.Scanner;
 
 public class Inicio {
@@ -8,7 +8,19 @@ public class Inicio {
         System.out.println("Hola APP");
 
         Conexion dbConnect = new Conexion();
-        dbConnect.get_connection();
+        try(Connection conexion = dbConnect.get_connection()){
+
+            Statement s = null;
+
+            String query = "INSERT INTO mensajes (mensaje, autor_mensaje) VALUES ('Test', 'Y-Men');";
+
+            s.executeUpdate(query);
+
+        }catch (SQLException e){
+            System.out.println(e);
+        }
+
+
 
         Scanner sc = new Scanner(System.in);
         int opcion = 0;

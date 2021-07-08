@@ -1,24 +1,26 @@
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Connection;
 
 
-public class MensajesDao {
-
+public class MensajesDao extends Conexion{
 
     public static void crearMensajeDB(Mensajes mensajes){
+/*
 
-        /*Conexion dbConnect = new Conexion();
+        Conexion dbConnect = new Conexion();
         try(Conexion conexion = dbConnect.get_connection()){
             PreparedStatement p = null;
             try(){
-                String query = "INSERT INTO mensajes (mensaje, autor_mensaje) VALUES (Que Onda, Luis Correa, CURRENT_TIMESTAMP)";
-                //EStas
+                String query = "INSERT INTO mensajes (mensaje, autor_mensaje) VALUES (Que Onda, Luis Correa, CURRENT_TIMESTAMP)"
             }
 
         }catch (SQLException e){
             System.out.println(e);
         }
 */
+
+
     }
 
     public static void leerMensajeDB(){

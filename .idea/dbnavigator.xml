@@ -41,6 +41,13 @@
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="0018a60d-1b65-4560-9926-f646bc97471b" />
   </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="0018a60d-1b65-4560-9926-f646bc97471b" dataset="mensaje_app.mensajes" active-filter-id="72267550-4987-4c5d-9057-af7f967bc054">
+      <filter id="72267550-4987-4c5d-9057-af7f967bc054" name="Leo Cabezas" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="autor_mensaje" operator="=" value="Leo Cabezas" active="true" />
+      </filter>
+    </filter-actions>
+  </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
   </component>

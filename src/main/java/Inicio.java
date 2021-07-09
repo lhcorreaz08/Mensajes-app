@@ -7,17 +7,23 @@ public class Inicio {
 
         System.out.println("Hola APP");
 
-        Conexion dbConnect = new Conexion();
-        try(Connection conexion = dbConnect.get_connection()){
+        try
+        {
+            // create a mysql database connection
+            Connection connection = null;
+            connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/mensaje_app", "luis", "tensorflow86");
 
-            Statement s = null;
+            Statement st = connection.createStatement();
 
-            String query = "INSERT INTO mensajes (mensaje, autor_mensaje) VALUES ('Test', 'Y-Men');";
+            // note that i'm leaving "date_created" out of this insert statement
+            st.executeUpdate("INSERT INTO mensajes (mensaje, autor_mensaje) VALUES ('F', 'Flinstone')");
 
-            s.executeUpdate(query);
-
-        }catch (SQLException e){
-            System.out.println(e);
+            connection.close();
+        }
+        catch (Exception e)
+        {
+            System.err.println("Got an exception!");
+            System.err.println(e.getMessage());
         }
 
 
